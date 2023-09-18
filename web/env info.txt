@@ -10,8 +10,7 @@ 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
 refresh token expirey every 24 hours
 https://developers.google.com/oauthplayground
 Select the required Gmail scopes (typically, "https://www.googleapis.com/auth/gmail.send" for sending emails).
-1//04Jpb314wo4pJCgYIARAAGAQSNwF-L9Irovhy1YA_d-rwZFzEvJpiAZOHqzcREURhdqn2GRwzI0mHUVh0DbMi9vhAlHngS-KWD6Y
-1//04Z3AC5wprxtlCgYIARAAGAQSNwF-L9Ir7XIbFVnDrent7tcQ-q7gawOE4R0Pc9T5_pBLzP0RcJ_9sy249ZL201SNSNtj1bc-KyY
+1//041YJuFXynB4XCgYIARAAGAQSNwF-L9IrdQQQ0jgfxTup_VrEfnNVR9wxbAEqxS-ridLa1Lz6Ec1LSP9Lp7tZGmoSgSQsqmA0BXU
 
 
 
@@ -28,3 +27,7 @@ URL=mongodb://localhost:27017/mydb
 mongodb://<username>:<password>@<host>:<port>/<database-name>
 mongodb://IMXSwarup:MongoSaathi123@<host>:<port>/<database-name>
 mongodb+srv://IMXSwarup:MongoSaathi123@clustersaathi.ngkxes1.mongodb.net/?retryWrites=true&w=majority
+
+
+ggoogleapp pass
+ulcwajvdeamdrkwj
