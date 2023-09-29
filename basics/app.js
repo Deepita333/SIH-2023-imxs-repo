@@ -58,8 +58,8 @@ app.post('/addData',async(req,res)=>{
 let mailOptions = { 
     from:process.env.USER,
     to:email,
-    subject: 'Nodemailer Project',
-    text: 'Hello from nodemailer',
+    subject: 'Saathi',
+    text: 'Welcome u have registered to Saathi. Now ur child may get a proper treatment from our consultant!',
 
 }
 
@@ -130,7 +130,7 @@ app.post('/findData', async (req, res) => {
       from: process.env.USER,
       to: email, // Use the validated 'email' variable
       subject: 'Doctor Appointment at Saathi.com',
-      text: `Your appointment has been booked with ${doctor}. Contact 8910132770 for more information.`,
+      text: `Your appointment has been booked with ${doctor}. Click https://wa.link/ze93cv for more information.`,
     }
   
     let transporter = nodemailer.createTransport({

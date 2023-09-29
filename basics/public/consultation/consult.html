@@ -3,36 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Counseling Services</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        header {
+            background-color: lightskyblue;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        form {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 400px; /* Set a maximum width for the form */
+            margin-top: 20px; /* Add some top margin to the form */
+        }
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        #result {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Counseling Services</h1>
     </header>
-    
-    <section id="doctors">
-        <!-- Doctor listings will be dynamically added here -->
-    </section>
-
-    <section id="appointment-form">
-        <h2>Book an Appointment</h2>
-        <form id="booking-form">
-            <label for="doctor">Select a Doctor:</label>
-            <select id="doctor" required>
-                <!-- Doctor options will be dynamically added here -->
-            </select>
-
-            <label for="date">Select a Date:</label>
-            <input type="date" id="date" required>
-
-            <label for="time">Select a Time:</label>
-            <input type="time" id="time" required>
-
-            <button type="submit">Book Appointment</button>
-        </form>
-    </section>
-
-    <script src="script1.js"></script>
+    <h2>Book an Appointment</h2>
+    <form id="booking-form">
+        <label for='doctor'>Select a Doctor:</label>
+        <input type ='text' id = "doctor" required>
+        <label for='date'>Select a Date:</label>
+        <input type='date' id="date" required>
+        <label for='time'>Select a Time:</label>
+        <input type='time' id="time" required>
+        <label for='email'>Enter your Gmail:</label>
+        <input type='text' id="email" required>
+        <button type='button' onclick="getapp()">Book Appointment</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function getapp() {
+            var doctor = document.getElementById("doctor").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+            var email = document.getElementById("email").value;
+            var data = {
+                doctor: doctor,
+                date: date,
+                time: time,
+                email: email
+            };
+            console.log(data);
+            fetch('/appointment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                const resultDiv = document.getElementById("result");
+                resultDiv.textContent = result.message;
+                window.alert("Appointment booked!");
+            });
+        }
+    </script>
 </body>
 </html>
+``
