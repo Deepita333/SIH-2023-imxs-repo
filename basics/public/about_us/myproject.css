@@ -1,0 +1,102 @@
+/* Reset some default styles to ensure consistency */
+body, h1, h2, h3, p, b, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #66cc99, #99cc99); /* Gradient background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style the header section */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #fff; /* Text color changed to white */
+    margin-top: 20px;
+}
+
+/* Style the subheading */
+h3 {
+    font-size: 20px;
+    text-align: center;
+    color: #fff; /* Text color changed to white */
+    margin-bottom: 20px;
+}
+
+/* Style the main content section */
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+b {
+    font-weight: bold;
+    color: #3498db;
+    text-align: center; /* Center-align bold text */
+}
+/* Style the content container */
+.content-container {
+    display: flex;
+    justify-content: space-between; /* Align text and images side by side */
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+  }
+  
+  /* Style the text content */
+  .text-content {
+    flex: 1; /* Allow text to grow and fill available space */
+  }
+  
+  /* Style the image content */
+  .image-content {
+    flex: 1; /* Allow images to grow and fill available space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style individual images */
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Adjust spacing between images */
+  }
+  
+/* Center-align buttons */
+button {
+    text-align: center;
+    display: block; /* Make buttons a block element */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Container for the overview and mission sections */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some spacing to the container */
+.container h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Add a box shadow to the container for depth */
+.container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

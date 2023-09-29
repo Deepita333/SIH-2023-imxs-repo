@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Depression Test</title>
+
+</head>
+     
+     
+
+<body>
+  <header>
+    <h1>Depression Test</h1>
+  </header>
+  <main>
+    <section class="question">
+      <h2>Question 1: How are you feeling today?</h2>
+      <video controls>
+        <source src="videos/v1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="options">
+          <div class="option" onclick="selectOption('option1')">
+              <img src="buttonpic/y.jpg" alt="ok"> Yes
+          </div>
+          <div class="option" onclick="selectOption('option2')">
+              <img src="buttonpic/n.jpg" alt="happy"> No
+          </div>
+      </div>
+    </section>
+
+    <!-- Add more question sections with options as needed -->
+
+    <button id="submit" onclick="submitAnswers()">Submit</button>
+  </main>
+
+   
+  <script src="script.js"></script>
+</body>
+</html>
